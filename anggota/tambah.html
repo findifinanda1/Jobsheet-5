@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMPUS-Mini | Tambah Anggota</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <button type="button" id="nav-toggle-btn" class="nav-toggle-label" aria-label="Menu">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../buku/list.html">Daftar Buku</a></li>
+                <li><a href="list.html">Daftar Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Anggota Baru</h2>
+            <form id="form-tambah" novalidate>
+                <p>
+                    <label for="nama">Nama Lengkap <span style="color:red">* wajib</span></label>
+                    <input type="text" id="nama" name="nama">
+                </p>
+                <p>
+                    <label for="nim">NIM / ID Anggota</label>
+                    <input type="text" id="nim" name="nim">
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 5 JavaScript DOM & Event</p>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>

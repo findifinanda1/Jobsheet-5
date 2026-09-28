@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcf8fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #d63384;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        width: 100%;
+        margin-top: 0;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease;
+    }
+
+    header nav.nav-open {
+        max-height: 300px;
+        opacity: 1;
+        margin-top: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+main {
+    flex: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #d63384;
+    font-weight: 700;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #d63384;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.btn-edit,
+.btn-detail,
+.btn-hapus,
+a.btn-edit,
+a.btn-detail,
+a.btn-hapus,
+button.btn-edit,
+button.btn-detail,
+button.btn-hapus {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    color: #fff !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    cursor: pointer;
+    margin-right: 0.25rem;
+    line-height: 1.2;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-edit,
+a.btn-edit,
+button.btn-edit {
+    background-color: #f0ad4e !important;
+}
+
+.btn-edit:hover,
+a.btn-edit:hover,
+button.btn-edit:hover {
+    background-color: #ec971f !important;
+}
+
+.btn-detail,
+a.btn-detail,
+button.btn-detail {
+    background-color: #17a2b8 !important;
+}
+
+.btn-detail:hover,
+a.btn-detail:hover,
+button.btn-detail:hover {
+    background-color: #138496 !important;
+}
+
+.btn-hapus,
+a.btn-hapus,
+button.btn-hapus {
+    background-color: #d9534f !important;
+}
+
+.btn-hapus:hover,
+a.btn-hapus:hover,
+button.btn-hapus:hover {
+    background-color: #c9302c !important;
+}
+
+form p {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #d63384;
+    box-shadow: 0 0 0 0.2rem rgba(214, 51, 132, 0.25);
+}
+
+button[type="submit"] {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: #b8226c;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+footer {
+    background-color: #d63384;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
