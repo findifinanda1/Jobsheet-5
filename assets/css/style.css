@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fcf8fa;
+    background-color: #f4f5f7;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -54,8 +54,23 @@ header nav a:hover {
     cursor: pointer;
 }
 
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
 @media (max-width: 480px) {
     .nav-toggle-label {
+        display: block;
+    }
+
+    .hamburger {
         display: block;
     }
 
@@ -68,7 +83,8 @@ header nav a:hover {
         transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease;
     }
 
-    header nav.nav-open {
+    header nav.nav-open,
+    header:has(#menu-toggle:checked) nav {
         max-height: 300px;
         opacity: 1;
         margin-top: 1rem;
@@ -95,10 +111,46 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+main section + section {
+    margin-top: 1.5rem;
+}
+
 h2 {
     margin-bottom: 1.5rem;
     color: #d63384;
     font-weight: 700;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.stats-grid article {
+    background: #fce4ec;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stats-grid h3 {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+}
+
+.stats-grid p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d63384;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .table-responsive {
@@ -239,8 +291,8 @@ button[type="submit"]:hover {
 }
 
 footer {
-    background-color: #d63384;
-    color: #fff;
+    background: none;
+    color: #718096;
     text-align: center;
     padding: 1rem;
     margin-top: auto;
